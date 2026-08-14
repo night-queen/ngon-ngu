@@ -1,84 +1,79 @@
 /* ==========================================================
-   script.js — Premium Interactive Information Module
-   Tuồng Việt Nam
+   script.js — Ngôn ngữ trong nghệ thuật Tuồng
+   - Scroll reveal (fade-in on enter viewport)
+   - Floating scroll-to-top button
+   - Footer "to-top" button
+   - Smooth scrolling is handled by CSS (scroll-behavior)
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal();
-    initAccordion();
-    initScrollToTop();
+    initFloatingTop();
+    initFooterTop();
 });
 
-/* ==========================================================
-   Scroll Reveal (fade-in on enter viewport)
-========================================================== */
-
-function initScrollReveal() {
-    const els = document.querySelectorAll(".fade-in");
+/* ----------------------------------------------------------
+   Reveal elements as they enter the viewport.
+   Falls back to visible if IntersectionObserver is absent.
+---------------------------------------------------------- */
+function initScrollReveal(){
+    const els = document.querySelectorAll(".reveal");
     if (!els.length) return;
 
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            });
-        },
-        { threshold: 0.12 }
-    );
+    if (!("IntersectionObserver" in window)){
+        els.forEach(el => el.classList.add("is-visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
     els.forEach(el => observer.observe(el));
 }
 
-/* ==========================================================
-   Quick-Reference Accordion
-========================================================== */
+/* ----------------------------------------------------------
+   Floating scroll-to-top button (created dynamically so the
+   markup stays clean). Appears after scrolling a full screen.
+---------------------------------------------------------- */
+function initFloatingTop(){
+    const btn = document.createElement("button");
+    btn.className = "float-top";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Lên đầu trang");
+    btn.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-arrow-up"/></svg>';
+    document.body.appendChild(btn);
 
-function initAccordion() {
-    const items = document.querySelectorAll(".acc-item");
+    btn.addEventListener("click", scrollToTop);
 
-    items.forEach(item => {
-        const btn = item.querySelector(".acc-btn");
-        const panel = item.querySelector(".acc-panel");
-        if (!btn || !panel) return;
-
-        btn.addEventListener("click", () => {
-            const isOpen = item.classList.contains("open");
-
-            // close all others
-            items.forEach(other => {
-                if (other === item) return;
-                other.classList.remove("open");
-                const otherBtn = other.querySelector(".acc-btn");
-                const otherPanel = other.querySelector(".acc-panel");
-                if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
-                if (otherPanel) otherPanel.style.maxHeight = "0";
-            });
-
-            // toggle current
-            if (isOpen) {
-                item.classList.remove("open");
-                btn.setAttribute("aria-expanded", "false");
-                panel.style.maxHeight = "0";
-            } else {
-                item.classList.add("open");
-                btn.setAttribute("aria-expanded", "true");
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+    let ticking = false;
+    const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+            btn.classList.toggle("show", window.scrollY > window.innerHeight * 0.9);
+            ticking = false;
         });
-    });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
 }
 
-/* ==========================================================
-   Scroll To Top
-========================================================== */
-
-function initScrollToTop() {
+/* ----------------------------------------------------------
+   Footer "to-top" button in the footer bar.
+---------------------------------------------------------- */
+function initFooterTop(){
     const btn = document.querySelector(".to-top");
     if (!btn) return;
+    btn.addEventListener("click", scrollToTop);
+}
 
-    btn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+/* ---------------------------------------------------------- */
+function scrollToTop(){
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
 }

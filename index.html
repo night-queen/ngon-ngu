@@ -3,373 +3,571 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đặc điểm đặc trưng của lối diễn xuất trong nghệ thuật Tuồng Việt Nam</title>
+    <meta name="description" content="Ngôn ngữ trong nghệ thuật Tuồng (hát bội) Việt Nam — nói lối, hát nam, khách, xướng, bạch, ngâm, thán, oán, quân ban và hát bài.">
+    <title>Ngôn ngữ trong nghệ thuật Tuồng Việt Nam</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display:ital@0;1&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
+<!-- ============================================================
+     SVG ICON SPRITE (referenced via <use>) — matches the line
+     glyphs shown in the reference screenshots.
+============================================================ -->
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    </symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+    </symbol>
+    <symbol id="i-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+    </symbol>
+    <symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </symbol>
+    <symbol id="i-feather" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.5l1.9 5.6a3 3 0 0 0 2 2L21.5 12l-5.6 1.9a3 3 0 0 0-2 2L12 21.5l-1.9-5.6a3 3 0 0 0-2-2L2.5 12l5.6-1.9a3 3 0 0 0 2-2z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 7 10-7"/>
+    </symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
+    </symbol>
+</svg>
 
-    <div class="cloud cloud-tl">
-        <svg viewBox="0 0 200 60" fill="none">
-            <path d="M10 45 Q30 15 50 35 Q60 8 85 28 Q100 5 120 30 Q140 10 160 35 Q175 15 195 40" stroke="#D4A94A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-            <path d="M20 52 Q40 28 60 42 Q75 20 100 38 Q120 18 145 42 Q165 25 185 48" stroke="#D4A94A" stroke-width="1" stroke-linecap="round" fill="none"/>
+
+<!-- ============================================================
+     INTRO — "NGÔN NGỮ"
+============================================================ -->
+<header class="intro">
+    <div class="top-bar"></div>
+
+    <!-- Floating decorative sparkles -->
+    <span class="deco-sparkle deco-sparkle--a"><svg class="ico"><use href="#i-sparkle"/></svg></span>
+    <span class="deco-sparkle deco-sparkle--b"><svg class="ico"><use href="#i-sparkle"/></svg></span>
+
+    <div class="intro-inner reveal">
+        <h1 class="intro-title">Ngôn Ngữ</h1>
+        <span class="intro-divider" aria-hidden="true"></span>
+        <p class="intro-text">
+            Ngôn ngữ trong hát bội được biểu diễn qua nhiều hình thức khác nhau, nhưng vẫn
+            mang tính đặc trưng của loại hình này. Bên cạnh đó, sự đa dạng ngôn ngữ trong sân
+            khấu Tuồng còn thể hiện sự phong phú của ngôn ngữ tại Việt Nam. Mỗi giọng hát có
+            những đặc điểm nghệ thuật riêng và được nghệ sĩ sử dụng trong nhiều hoàn cảnh
+            khác nhau.
+        </p>
+    </div>
+
+    <!-- Sparkle divider marking the seam into the content -->
+    <div class="seam-divider" aria-hidden="true">
+        <span class="seam-line"></span>
+        <svg class="seam-star"><use href="#i-sparkle"/></svg>
+        <span class="seam-line"></span>
+    </div>
+</header>
+
+
+<!-- ============================================================
+     CONTENT — numbered sections 1..10
+============================================================ -->
+<main class="content">
+
+    <!-- ============ 1 · Nói lối ============ -->
+    <section class="lang-section band band--red" id="noi-loi">
+        <svg class="band-wave band-wave--deep" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
         </svg>
-    </div>
-    <div class="cloud cloud-br flip">
-        <svg viewBox="0 0 200 60" fill="none">
-            <path d="M10 45 Q30 15 50 35 Q60 8 85 28 Q100 5 120 30 Q140 10 160 35 Q175 15 195 40" stroke="#D4A94A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-            <path d="M20 52 Q40 28 60 42 Q75 20 100 38 Q120 18 145 42 Q165 25 185 48" stroke="#D4A94A" stroke-width="1" stroke-linecap="round" fill="none"/>
-        </svg>
-    </div>
 
-    <div class="hero-line-top"></div>
-
-    <div class="hero-inner fade-in">
-
-        <div class="center-lotus"></div>
-
-        <div class="eyebrow">
-            <span class="rule"></span>
-            <span class="eyebrow-text">Nghệ Thuật Truyền Thống Việt Nam</span>
-            <span class="rule"></span>
-        </div>
-
-        <h1 class="hero-title">Đặc Điểm Đặc Trưng</h1>
-        <h1 class="hero-title">Của Lối Diễn Xuất</h1>
-        <h2 class="hero-subtitle">Trong Nghệ Thuật Tuồng Việt Nam</h2>
-
-        <div class="gold-divider"></div>
-
-        <div class="index-chips">
-            <div class="chip"><span class="chip-n">1.</span><span class="chip-label">Tính ước lệ và cách điệu cao</span></div>
-            <div class="chip"><span class="chip-n">2.</span><span class="chip-label">Hệ thống động tác hình thể</span></div>
-            <div class="chip"><span class="chip-n">3.</span><span class="chip-label">Hát, nói, múa và diễn</span></div>
-            <div class="chip"><span class="chip-n">4.</span><span class="chip-label">Tính điển hình hóa nhân vật</span></div>
-            <div class="chip"><span class="chip-n">5.</span><span class="chip-label">Biểu hiện nội tâm</span></div>
-            <div class="chip"><span class="chip-n">6.</span><span class="chip-label">Tính anh hùng ca</span></div>
-        </div>
-
-    </div>
-
-    <div class="hero-line-bottom"></div>
-
-</section>
-
-<!-- ===================== SECTION 1 ===================== -->
-<section class="module-section pt-top">
-    <div class="wrap fade-in">
-        <div class="card">
-            <div class="card-head head-maroon head-border-thin">
-                <div class="sec-num">1</div>
-                <h2 class="card-title">Tính ước lệ và cách điệu cao</h2>
-            </div>
-            <div class="card-body">
-                <p class="lead">
-                    Đây là đặc trưng nổi bật nhất của nghệ thuật diễn xuất Tuồng. Tuồng không tái hiện
-                    hiện thực đời sống một cách trực tiếp mà sử dụng hệ thống ký hiệu nghệ thuật mang
-                    tính quy ước. Mọi hành động, không gian, thời gian và cảm xúc đều được biểu đạt
-                    thông qua những động tác đã được cách điệu hóa.
-                </p>
-
-                <div class="callout callout-example">
-                    <p class="callout-eyebrow">Ví dụ:</p>
-                    <div class="bullet"><span class="dot"></span><span>Diễn viên chỉ cần cầm roi và thực hiện các động tác đặc trưng để biểu thị cảnh cưỡi ngựa.</span></div>
-                    <div class="bullet"><span class="dot"></span><span>Một vòng đi quanh sân khấu có thể tượng trưng cho hành trình hàng trăm dặm.</span></div>
-                    <div class="bullet"><span class="dot"></span><span>Các động tác mở cửa, lên núi, xuống thuyền đều có những quy phạm biểu diễn riêng.</span></div>
+        <div class="wrap reveal">
+            <div class="tq-head">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">01</span>
+                    <h2 class="tq-title">1. Nói lối</h2>
                 </div>
+                <span class="tq-rule" aria-hidden="true"></span>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- ===================== SECTION 2 ===================== -->
-<section class="module-section">
-    <div class="wrap fade-in">
-        <div class="card">
-            <div class="card-head head-navy head-border-gold">
-                <div class="sec-num">2</div>
-                <h2 class="card-title">Hệ thống động tác hình thể được quy chuẩn hóa</h2>
-            </div>
-            <div class="card-body">
-                <p class="lead">
-                    Các động tác đi, đứng, ngồi, quay người, vung tay, múa kiếm, cưỡi ngựa, chiến đấu
-                    đều được xây dựng thành những quy tắc biểu diễn nghiêm ngặt. Nghệ sĩ phải trải qua
-                    quá trình rèn luyện lâu dài để thực hiện chính xác các động tác này.
-                </p>
-
-                <div class="grid-2">
-                    <div class="callout callout-list">
-                        <p class="callout-eyebrow">Một số động tác cơ bản gồm:</p>
-                        <div class="chip-list">
-                            <div class="list-item"><span class="lotus-sm"></span><span>Bộ đi (ra bộ)</span></div>
-                            <div class="list-item"><span class="lotus-sm"></span><span>Xiên</span></div>
-                            <div class="list-item"><span class="lotus-sm"></span><span>Lỉa</span></div>
-                            <div class="list-item"><span class="lotus-sm"></span><span>Bê</span></div>
-                            <div class="list-item"><span class="lotus-sm"></span><span>Lăn</span></div>
-                            <div class="list-item"><span class="lotus-sm"></span><span>Múa chiến trận</span></div>
-                        </div>
-                    </div>
-
-                    <div class="callout callout-principle">
-                        <p class="callout-eyebrow light">Nguyên tắc cốt lõi</p>
-                        <p class="big-quote">"thủ thế"</p>
-                        <p class="callout-text">
-                            Một nguyên tắc quan trọng trong nghệ thuật hình thể của Tuồng là thủ pháp
-                            <strong>"thủ thế"</strong>. Diễn viên luôn duy trì tư thế vững chắc, trọng tâm
-                            dồn xuống hai chân, tạo nên vẻ uy nghiêm và sức mạnh cho nhân vật. Sự phối hợp
-                            nhịp nhàng giữa đầu, mắt, tay và chân giúp các động tác trở nên dứt khoát,
-                            chuẩn mực và giàu tính biểu cảm. Đây là nền tảng quan trọng để nghệ sĩ thực
-                            hiện các động tác biểu diễn mang tính cách điệu cao của sân khấu Tuồng.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===================== SECTION 3 ===================== -->
-<section class="module-section">
-    <div class="wrap fade-in">
-        <div class="card">
-            <div class="card-head head-maroon head-border-thin">
-                <div class="sec-num">3</div>
-                <h2 class="card-title">Kết hợp chặt chẽ giữa hát, nói, múa và diễn</h2>
-            </div>
-            <div class="card-body">
-                <p class="lead">Người nghệ sĩ không chỉ diễn bằng hình thể mà còn phải:</p>
-
-                <div class="pill-row">
-                    <div class="pill pill-a"><span class="lotus-sm"></span><span>Hát</span></div>
-                    <div class="pill pill-b"><span class="lotus-sm"></span><span>Nói lối</span></div>
-                    <div class="pill pill-a"><span class="lotus-sm"></span><span>Ngâm</span></div>
-                    <div class="pill pill-b"><span class="lotus-sm"></span><span>Múa</span></div>
-                    <div class="pill pill-a"><span class="lotus-sm"></span><span>Biểu cảm bằng ánh mắt và thần thái</span></div>
-                </div>
-
-                <div class="vanvo">
-                    <div class="vanvo-head"><p class="callout-eyebrow">Hai yếu tố cốt lõi</p></div>
-                    <div class="vanvo-grid">
-                        <div class="vanvo-col van">
-                            <div class="tag">"văn"</div>
-                            <p class="callout-text">"Văn" thể hiện ở khả năng ca hát, nói lối, biểu cảm và diễn tả nội tâm nhân vật</p>
-                        </div>
-                        <div class="vanvo-col vo">
-                            <div class="tag">"võ"</div>
-                            <p class="callout-text">"võ" thể hiện ở các động tác chiến trận, múa kiếm, nhào lộn và kỹ thuật hình thể</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="lead">
-                    Đặc biệt, diễn xuất Tuồng đòi hỏi sự kết hợp hài hòa giữa hai yếu tố
-                    <strong>"văn"</strong> và <strong>"võ"</strong>. Sự kết hợp nhuần nhuyễn giữa "văn"
-                    và "võ" không chỉ làm tăng tính hấp dẫn của vở diễn mà còn góp phần khắc họa rõ nét
-                    tính cách và khí chất của nhân vật trên sân khấu.
-                </p>
-
-                <div class="callout callout-noiloi">
-                    <p class="big-quote sm">"nói lối"</p>
-                    <p class="callout-text">
-                        Trong đó, "nói lối" là hình thức biểu đạt đặc trưng của Tuồng. Đây là kiểu chuyển
-                        tiếp giữa lời nói và lời hát, giúp nhân vật bộc lộ cảm xúc, giới thiệu hoàn cảnh
-                        hoặc triển khai tình huống kịch. Hệ thống nói lối rất phong phú, phù hợp với từng
-                        trạng thái tâm lý và địa vị nhân vật.
+            <div class="tq-grid">
+                <div class="tq-col">
+                    <p class="tq-lead">
+                        Gọi là nói nhưng thực chất là hát có vần, có điệu, có tiết tấu... Nói lối là
+                        làn điệu nói dẫn đường, được dùng trong những trường hợp như: tự giới thiệu
+                        với khán giả và trình bày một cảnh ngộ nào đó, xưng tên tuổi, chức tước,
+                        khiên chiến trước khi ra trận...
+                    </p>
+                    <p class="tq-body">
+                        Có bốn cách nói lối chính, gồm <em class="tq-em">lối xuân, lối ai, lối xẳng, lối thường.</em>
                     </p>
                 </div>
+
+                <aside class="tq-panel">
+                    <p class="tq-panel-label">Bốn cách nói lối</p>
+                    <ul class="tq-list">
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-wind"/></svg>
+                                    <h3 class="tq-row-title">Lối xuân</h3>
+                                </div>
+                                <p class="tq-row-text">nói chậm rãi, nghiêm nghị thường dùng để xưng tên / đối thoại.</p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-heart"/></svg>
+                                    <h3 class="tq-row-title">lối ai</h3>
+                                </div>
+                                <p class="tq-row-text">dùng để tả tâm sự đau buồn trước cảnh sinh li tử biệt.</p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-flame"/></svg>
+                                    <h3 class="tq-row-title">Lối xẳng</h3>
+                                </div>
+                                <p class="tq-row-text">nói nhanh hơn lối xuân và lối ai, được dùng trong lúc giận dữ hay khi tỏ bày điều khí khái.</p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-circle"/></svg>
+                                    <h3 class="tq-row-title">Lối thường</h3>
+                                </div>
+                                <p class="tq-row-text">lối nói những câu văn xuôi.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ===================== SECTION 4 ===================== -->
-<section class="module-section">
-    <div class="wrap fade-in">
-        <div class="card">
-            <div class="card-head head-maroon head-border-gold">
-                <div class="sec-num">4</div>
-                <h2 class="card-title">Tính điển hình hóa nhân vật</h2>
-            </div>
-            <div class="card-body">
-                <p class="lead">
-                    Nhân vật Tuồng không hướng đến việc khắc họa cá tính riêng biệt như sân khấu hiện
-                    đại mà mang tính điển hình. Mỗi nhân vật đại diện cho một nhóm phẩm chất đạo đức
-                    hoặc một kiểu tính cách xã hội:
-                </p>
+    <!-- ============ 2 · Hát nam ============ -->
+    <section class="lang-section band band--navy" id="hat-nam">
+        <svg class="band-wave band-wave--red" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
 
-                <div class="char-grid">
-                    <div class="char-card d"><span class="lotus-sm"></span><span>Trung thần</span></div>
-                    <div class="char-card l"><span class="lotus-sm"></span><span>Gian thần</span></div>
-                    <div class="char-card d"><span class="lotus-sm"></span><span>Trung tướng</span></div>
-                    <div class="char-card l"><span class="lotus-sm"></span><span>Nịnh thần</span></div>
-                    <div class="char-card d"><span class="lotus-sm"></span><span>Anh hùng</span></div>
-                    <div class="char-card l"><span class="lotus-sm"></span><span>Hào kiệt</span></div>
-                    <div class="char-card x"><span class="lotus-sm"></span><span>Hề</span></div>
+        <div class="wrap reveal">
+            <div class="tq-head">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">02</span>
+                    <h2 class="tq-title">2. Hát nam</h2>
                 </div>
-
-                <p class="lead last">
-                    Do đó, lối diễn xuất cũng được quy định theo từng loại vai diễn. Mỗi vai có hệ thống
-                    động tác, giọng hát, cách nói và phong thái riêng. Người xem chỉ cần nhìn dáng đi,
-                    cách xuất hiện hoặc nghe giọng hát đã có thể nhận biết loại nhân vật đang xuất hiện
-                    trên sân khấu.
-                </p>
+                <span class="tq-rule" aria-hidden="true"></span>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- ===================== SECTION 5 ===================== -->
-<section class="module-section">
-    <div class="wrap fade-in">
-        <div class="card">
-            <div class="card-head head-maroon head-border-thin">
-                <div class="sec-num">5</div>
-                <h2 class="card-title">Biểu hiện nội tâm thông qua ngoại hiện</h2>
-            </div>
-            <div class="card-body">
-                <p class="lead">
-                    Khác với kịch nói hiện đại thường khai thác tâm lý bên trong bằng lời thoại tự nhiên,
-                    Tuồng biểu đạt nội tâm thông qua hình thức bên ngoài. Tâm trạng của nhân vật được
-                    thể hiện bằng:
-                </p>
-
-                <div class="expr-grid">
-                    <div class="expr-card a"><img class="expr-icon" src="img/1.png" alt="Động tác hình thể"><span>Động tác hình thể</span></div>
-                    <div class="expr-card b"><img class="expr-icon" src="img/2.png" alt="Ánh mắt"><span>Ánh mắt</span></div>
-                    <div class="expr-card a"><img class="expr-icon" src="img/3.png" alt="Tư thế"><span>Tư thế</span></div>
-                    <div class="expr-card b"><img class="expr-icon" src="img/4.png" alt="Nhịp điệu bước đi"><span>Nhịp điệu bước đi</span></div>
-                    <div class="expr-card a"><img class="expr-icon" src="img/5.png" alt="Âm điệu lời hát"><span>Âm điệu lời hát</span></div>
-                    <div class="expr-card b"><img class="expr-icon" src="img/6.png" alt="Màu sắc hóa trang"><span>Màu sắc hóa trang</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===================== SECTION 6 ===================== -->
-<section class="module-section">
-    <div class="wrap fade-in">
-        <div class="card">
-            <div class="card-head head-maroon head-border-gold">
-                <div class="sec-num">6</div>
-                <h2 class="card-title">Tính anh hùng ca và khuynh hướng lý tưởng hóa</h2>
-            </div>
-            <div class="card-body has-clouds">
-                <p class="lead">
-                    Phần lớn các vở Tuồng khai thác đề tài lịch sử và những cuộc đấu tranh vì chính
-                    nghĩa. Do đó, diễn xuất Tuồng thường mang phong cách:
-                </p>
-
-                <div class="style-chips">
-                    <div class="style-chip a">Hùng tráng</div>
-                    <div class="style-chip b">Mạnh mẽ</div>
-                    <div class="style-chip a">Trang trọng</div>
-                    <div class="style-chip b">Bi tráng</div>
-                </div>
-
-                <div class="closing">
-                    <div class="closing-top"></div>
-                    <div class="center-lotus"></div>
-                    <p class="closing-text">
-                        Các nhân vật chính diện thường được lý tưởng hóa về đạo đức và khí phách. Điều này
-                        tạo nên chất sử thi và tinh thần anh hùng đặc trưng của sân khấu Tuồng Việt Nam.
+            <div class="tq-grid tq-grid--stack">
+                <div class="tq-col">
+                    <p class="tq-lead">
+                        Hát nam được hiểu là những câu hát được viết theo thể văn gần thông thường
+                        (lục bát / song thất lục bát / lúc bát giảm thất). Hát nam có 5 điệu khác nhau
+                        tùy thuộc vào hoàn cảnh:
                     </p>
                 </div>
+
+                <aside class="tq-panel">
+                    <p class="tq-panel-label">Các điệu hát nam</p>
+                    <ul class="tq-list">
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-music"/></svg>
+                                    <h3 class="tq-row-title">Nam xuân</h3>
+                                </div>
+                                <p class="tq-row-text">
+                                    có sắc thái buồn nhè nhàng, diễn tả tâm trạng trong những giây phút biệt
+                                    li / u sầu. Trước khi vào nam xuân, nhân vật thường nói bốn / hai câu lối xuân.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-heart"/></svg>
+                                    <h3 class="tq-row-title">Nam ai</h3>
+                                </div>
+                                <p class="tq-row-text">
+                                    Hát trong hoàn cảnh khổ đau não nề, diễn tả sự đau thương của vai tuồng:
+                                    cha em, vợ chồng, li biệt. Điệu Nam ai là điệu hát mà nhân vật thường làm
+                                    mùi lòng khán giả và cũng qua đó phô diễn tài nghệ của mình. Cũng như Nam
+                                    xuân, hát Nam ai cũng phải bắt đầu bằng những câu lối ai rồi mới vào bài chính.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-flame"/></svg>
+                                    <h3 class="tq-row-title">Nam dựng</h3>
+                                </div>
+                                <p class="tq-row-text">
+                                    có hơi xuân, nhưng tiếng phát âm có phần dựng đứng để tỏ ra sự cứng rắn của tâm tư.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-wind"/></svg>
+                                    <h3 class="tq-row-title">Nam bán xuân ai</h3>
+                                </div>
+                                <p class="tq-row-text">
+                                    Điệu hát nửa xuân nửa ai, những câu vui thì hát xuân, câu buồn thì hát ai.
+                                    Nghệ sĩ cần "gạt đi nước mắt" khi chuyển giữa hai lối hát, nhằm diễn tả cái
+                                    buồn, vừa làm hiệu cho dàn nhạc đổi qua lối hát phù hợp.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-feather"/></svg>
+                                    <h3 class="tq-row-title">Nam chạy</h3>
+                                </div>
+                                <p class="tq-row-text">
+                                    thường sử dụng lúc bị quân tướng của giặc truy nã, hay lúc bị lạc vào rừng.
+                                    Diễn viên vừa chạy vừa hát.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-heart"/></svg>
+                                    <h3 class="tq-row-title">Nam biệt</h3>
+                                </div>
+                                <p class="tq-row-text">
+                                    thường hát cho vợ chồng, mẹ con, anh em sắp từ biệt nhau, kẻ ở người đi.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="tq-row">
+                            <div class="tq-row-body">
+                                <div class="tq-row-head">
+                                    <svg class="tq-row-ico" aria-hidden="true"><use href="#i-circle"/></svg>
+                                    <h3 class="tq-row-title">Nam thiền</h3>
+                                </div>
+                                <p class="tq-row-text">là giọng hát Nam đặc biệt của những vai tăng ni.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
             </div>
         </div>
+    </section>
+
+    <!-- ============ 3 · Khách ============
+         NOTE: In the reference screenshots the top of this section
+         (its intro line and the first cards) is cropped and only
+         partially legible. The two fully-visible cards (Khách tẩu mã,
+         Khách tửu) and the one legible fragment are reproduced exactly;
+         the remaining card text is a best-effort reconstruction and
+         should be replaced with the exact source wording. -->
+    <section class="lang-section band band--red" id="khach">
+        <svg class="band-wave band-wave--navy" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">03</span>
+                    <h2 class="tq-title">3. Khách</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-grid tq-grid--stack">
+                <div class="tq-col">
+                    <p class="tq-lead">
+                        Hát khách là những điệu hát mang âm hưởng hùng tráng, thường dành cho các vai
+                        có khí phách. Hát khách gồm nhiều điệu khác nhau tùy theo hoàn cảnh diễn xuất:
+                    </p>
+                </div>
+
+                <aside>
+                    <p class="tq-panel-label">Các điệu hát khách</p>
+                    <div class="tq-tiles">
+                        <article class="tq-tile">
+                            <span class="tq-tile-badge"><svg class="tq-tile-ico" aria-hidden="true"><use href="#i-flame"/></svg></span>
+                            <h3 class="tq-tile-title">Khách tử</h3>
+                            <p class="tq-tile-text">là điệu hát khách thông thường, dùng để tự sự và bày tỏ chí khí của nhân vật.</p>
+                        </article>
+                        <article class="tq-tile">
+                            <span class="tq-tile-badge"><svg class="tq-tile-ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+                            <h3 class="tq-tile-title">Khách phú</h3>
+                            <p class="tq-tile-text">dùng khi hai bên quân binh phạt hoặc truy bức nhau về điều gì quan trọng.</p>
+                        </article>
+                        <article class="tq-tile">
+                            <span class="tq-tile-badge"><svg class="tq-tile-ico" aria-hidden="true"><use href="#i-circle"/></svg></span>
+                            <h3 class="tq-tile-title">Khách thường</h3>
+                            <p class="tq-tile-text">điệu hát khách bình thường, dùng trong đối đáp và trần thuật trên sân khấu.</p>
+                        </article>
+                        <article class="tq-tile">
+                            <span class="tq-tile-badge"><svg class="tq-tile-ico" aria-hidden="true"><use href="#i-wind"/></svg></span>
+                            <h3 class="tq-tile-title">Khách tẩu mã</h3>
+                            <p class="tq-tile-text">
+                                được hát lúc lên ngựa chạy mau để trốn giặc, trốn tình nhân hoặc phi báo
+                                việc cần kíp, hay lúc gấp rút xông ra trận mạc. Giọng hát vừa nhanh vừa
+                                giòn giã như vó ngựa phi.
+                            </p>
+                        </article>
+                        <article class="tq-tile">
+                            <span class="tq-tile-badge"><svg class="tq-tile-ico" aria-hidden="true"><use href="#i-music"/></svg></span>
+                            <h3 class="tq-tile-title">Khách tửu</h3>
+                            <p class="tq-tile-text">hát trong lúc uống rượu.</p>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 4 · Xướng ============ -->
+    <section class="lang-section band band--navy" id="xuong">
+        <svg class="band-wave band-wave--red" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">04</span>
+                    <h2 class="tq-title">4. Xướng</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Là nói to lên một cách chậm rãi cho mọi người đều nghe. Một vai tuồng mới ra mắt
+                    khán giả thường xướng bốn câu để bày tỏ tâm tư và hoàn cảnh của mình.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 5 · Bạch ============ -->
+    <section class="lang-section band band--red" id="bach">
+        <svg class="band-wave band-wave--navy" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">05</span>
+                    <h2 class="tq-title">5. Bạch</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Là giới thiệu, trình bày, dành cho các vai anh hùng nữ kiệt nói lên khí phách, chí
+                    hướng hoặc bộc bạch thành tích oanh liệt của mình. Bạch viết theo thể song thất
+                    không đối nhau, hoặc hai câu thất - thất có đối nhau, hoặc hai câu thất - thất có
+                    đối và kế đó là hai câu nữa có hay không có đối; đôi khi là bài thất ngôn tứ cú.
+                    Thông thường, nhân vật Bạch rồi mới xưng tên.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 6 · Ngâm ============ -->
+    <section class="lang-section band band--navy" id="ngam">
+        <svg class="band-wave band-wave--red" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">06</span>
+                    <h2 class="tq-title">6. Ngâm</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Tức là ngâm thơ. Hát bội cũng có lối ngâm thơ, giọng xuân, thường sử dụng trong
+                    lúc trà dư tửu hứng, hoặc lúc xúc cảnh sinh tình để biểu lộ nỗi niềm tâm sự đối
+                    với một cảnh ngộ hay một thói đời nhân thế nào đó. Trước khi ngâm có bốn câu nói
+                    lối mở giọng xuân, chấm dứt bằng chữ "hồ" ngắn.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 7 · Thán ============ -->
+    <section class="lang-section band band--red" id="than">
+        <svg class="band-wave band-wave--navy" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">07</span>
+                    <h2 class="tq-title">7. Thán</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Tức là than thở. Thán thường được dùng trong cảnh hoạn nạn, lúc lòng dạ bối rối,
+                    lúc ly biệt, hoặc cô đơn nơi rừng hoang núi cao, tha phương. Thán là một giọng
+                    buồn, diễn trên nền nhạc của bài Xuân nữ não nề, u uất.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 8 · Oán ============ -->
+    <section class="lang-section band band--navy" id="oan">
+        <svg class="band-wave band-wave--red" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">08</span>
+                    <h2 class="tq-title">8. Oán</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Là lời uất hận, dùng khi oán trách số phận hẩm hiu hoặc khóc người quá cố. Trên
+                    sân khấu Tuồng, những lời oán có kèm đưa hơi làm đệm thêm những sự sâu thảm va hờn oán.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 9 · Quân ban ============ -->
+    <section class="lang-section band band--red" id="quan-ban">
+        <svg class="band-wave band-wave--navy" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">09</span>
+                    <h2 class="tq-title">9. Quân ban</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Là bài hát, thường 4 câu, được sử dụng như để tố cáo mục đích của việc cử binh đi
+                    chinh phạt, hay về kinh vấn tội bọn loạn thần: Đám quán cơm cờ hiệu đứng tại cửa
+                    buồng hát hay đi qua đi lại vài vòng trên sân khấu, đồng thanh hát bài Quân ban.
+                    Sau Quân ban là điệu Hành binh (còn gọi là bắt bài).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 10 · Hát bài ============ -->
+    <section class="lang-section band band--navy" id="hat-bai">
+        <svg class="band-wave band-wave--red" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0,0 H1440 V22 C1300,46 1150,42 990,28 C830,14 700,8 560,18 C430,27 300,44 170,40 C102,38 48,32 0,24 Z"/>
+        </svg>
+
+        <div class="wrap reveal">
+            <div class="tq-head tq-head--center">
+                <p class="tq-eyebrow">Ngôn ngữ trong Tuồng</p>
+                <div class="tq-titlerow">
+                    <span class="tq-ghost" aria-hidden="true">10</span>
+                    <h2 class="tq-title">10. Hát bài</h2>
+                </div>
+                <span class="tq-rule" aria-hidden="true"></span>
+            </div>
+
+            <div class="tq-note">
+                <p class="tq-lead">
+                    Là những điệu hát chúc thọ cho vua, có kèm theo múa
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- ============================================================
+     REFERENCES — "Tài liệu tham khảo"
+============================================================ -->
+<section class="references" id="references">
+    <div class="wrap reveal">
+        <span class="ref-topline" aria-hidden="true"></span>
+        <h2 class="ref-title">Tài liệu tham khảo</h2>
+
+        <ul class="ref-list">
+            <li class="ref-item"><span class="ref-dot" aria-hidden="true"></span><span>Đa dạng các làn điệu hát Tuồng (Nguyễn Hường, 2021)</span></li>
+            <li class="ref-item"><span class="ref-dot" aria-hidden="true"></span><span>Nghệ thuật sân khấu Việt Nam (Trần Văn Khải)</span></li>
+            <li class="ref-item"><span class="ref-dot" aria-hidden="true"></span><span>Sổ tay thưởng thức hát bội (Huỳnh Ngọc Trảng, Nhà xuất bản Trẻ thành phố Hồ Chí Minh).</span></li>
+            <li class="ref-item"><span class="ref-dot" aria-hidden="true"></span><span>Nghệ thuật sân khấu hát Bội (Lê Văn Chiêu, Nhà xuất bản Trẻ).</span></li>
+        </ul>
     </div>
 </section>
 
-<!-- ===================== QUICK REFERENCE ===================== -->
-<section class="quickref">
-    <div class="wrap">
-        <div class="qr-head fade-in">
-            <span class="qr-eyebrow">Tổng quan nhanh</span>
-            <h2 class="qr-title">Sáu Đặc Trưng Cốt Lõi</h2>
-            <div class="gold-divider"></div>
-        </div>
 
-        <div class="accordion">
-            <div class="acc-item fade-in">
-                <button class="acc-btn" aria-expanded="false">
-                    <span class="acc-num">1</span>
-                    <span class="acc-title">Tính ước lệ và cách điệu cao</span>
-                    <span class="acc-plus">+</span>
-                </button>
-                <div class="acc-panel"><div class="acc-panel-inner"><span class="lotus-sm"></span><p>Đây là đặc trưng nổi bật nhất của nghệ thuật diễn xuất Tuồng.</p></div></div>
-            </div>
-            <div class="acc-item fade-in">
-                <button class="acc-btn" aria-expanded="false">
-                    <span class="acc-num">2</span>
-                    <span class="acc-title">Hệ thống động tác hình thể được quy chuẩn hóa</span>
-                    <span class="acc-plus">+</span>
-                </button>
-                <div class="acc-panel"><div class="acc-panel-inner"><span class="lotus-sm"></span><p>Nghệ sĩ phải trải qua quá trình rèn luyện lâu dài để thực hiện chính xác các động tác này.</p></div></div>
-            </div>
-            <div class="acc-item fade-in">
-                <button class="acc-btn" aria-expanded="false">
-                    <span class="acc-num">3</span>
-                    <span class="acc-title">Kết hợp chặt chẽ giữa hát, nói, múa và diễn</span>
-                    <span class="acc-plus">+</span>
-                </button>
-                <div class="acc-panel"><div class="acc-panel-inner"><span class="lotus-sm"></span><p>Người nghệ sĩ không chỉ diễn bằng hình thể mà còn phải hát, nói lối, ngâm, múa và biểu cảm.</p></div></div>
-            </div>
-            <div class="acc-item fade-in">
-                <button class="acc-btn" aria-expanded="false">
-                    <span class="acc-num">4</span>
-                    <span class="acc-title">Tính điển hình hóa nhân vật</span>
-                    <span class="acc-plus">+</span>
-                </button>
-                <div class="acc-panel"><div class="acc-panel-inner"><span class="lotus-sm"></span><p>Mỗi nhân vật đại diện cho một nhóm phẩm chất đạo đức hoặc một kiểu tính cách xã hội.</p></div></div>
-            </div>
-            <div class="acc-item fade-in">
-                <button class="acc-btn" aria-expanded="false">
-                    <span class="acc-num">5</span>
-                    <span class="acc-title">Biểu hiện nội tâm thông qua ngoại hiện</span>
-                    <span class="acc-plus">+</span>
-                </button>
-                <div class="acc-panel"><div class="acc-panel-inner"><span class="lotus-sm"></span><p>Tuồng biểu đạt nội tâm thông qua hình thức bên ngoài — động tác, ánh mắt, tư thế, bước đi.</p></div></div>
-            </div>
-            <div class="acc-item fade-in">
-                <button class="acc-btn" aria-expanded="false">
-                    <span class="acc-num">6</span>
-                    <span class="acc-title">Tính anh hùng ca và khuynh hướng lý tưởng hóa</span>
-                    <span class="acc-plus">+</span>
-                </button>
-                <div class="acc-panel"><div class="acc-panel-inner"><span class="lotus-sm"></span><p>Diễn xuất Tuồng mang phong cách hùng tráng, mạnh mẽ, trang trọng, bi tráng.</p></div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="site-footer">
-    <div class="wrap footer-main">
+<!-- ============================================================
+     FOOTER — "Liên hệ"
+============================================================ -->
+<footer class="site-footer" id="lien-he">
+    <div class="wrap footer-main reveal">
         <div class="footer-left">
             <h2 class="footer-heading">Liên hệ</h2>
-            <div class="footer-underline"></div>
+            <span class="footer-underline" aria-hidden="true"></span>
             <p class="footer-text">
-                Chúng tôi luôn sẵn sàng lắng nghe những ý kiến đóng góp và kết nối cùng
-                cộng đồng yêu nghệ thuật Tuồng.
+                Chúng tôi luôn sẵn sàng lắng nghe những ý kiến đóng góp và kết nối cùng cộng đồng
+                yêu nghệ thuật Tuồng.
             </p>
         </div>
 
         <div class="footer-right">
             <div class="email-card">
-                <div class="email-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <rect x="2" y="4" width="20" height="16" rx="2" stroke="#F4EDE0" stroke-width="1.5"/>
-                        <path d="M2 8l10 7 10-7" stroke="#F4EDE0" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </div>
+                <span class="email-icon"><svg class="ico"><use href="#i-mail"/></svg></span>
                 <p class="email-label">Email</p>
                 <p class="email-value">contact@tantuongdienpho.vn</p>
             </div>
@@ -379,11 +577,9 @@
     <div class="footer-bar">
         <div class="wrap footer-bar-inner">
             <p class="copyright">© 2026 Tân Tuồng Diện Phố. All rights reserved.</p>
-            <a href="#" class="footer-link">Module 01</a>
-            <button class="to-top" aria-label="Scroll to top">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M7 11V3M7 3L3 7M7 3l4 4" stroke="#F4EDE0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            <span class="footer-module">Module 01</span>
+            <button class="to-top" type="button" aria-label="Lên đầu trang">
+                <svg class="ico"><use href="#i-arrow-up"/></svg>
             </button>
         </div>
     </div>
